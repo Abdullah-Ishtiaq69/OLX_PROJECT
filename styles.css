@@ -1,0 +1,120 @@
+@font-face {
+  font-family: "primary";
+  src: url(./fonts/Geomanist-Regular.otf);
+}
+
+:root {
+  --primary-font: "primary";
+
+  --primary-color: #002f34;
+  --secondary-color: #f2f4f5;
+  --header-color: #ebf1ff;
+  --footer-color: #e4eaf9;
+  --hover-color-blue: #3a77ff;
+  --hover-color-gray: #002f34a3;
+
+  --fw-semibold: 600;
+  --fw-bold: 700;
+}
+
+/* CSS Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style-type: none;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Main Styling */
+
+.header {
+  padding: 12px 20px 0px;
+  background-color: var(--header-color);
+}
+
+.logo a {
+  background-color: white;
+  padding: 18px;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+.motor,
+.property {
+  cursor: pointer;
+}
+
+.motor img:hover ~ a,
+.motor a:hover,
+.property img:hover ~ a,
+.property a:hover {
+  color: var(--hover-color-blue) !important;
+}
+
+.header-right {
+  padding-bottom: 6px;
+}
+
+.login a {
+  border-bottom: 2px solid black;
+}
+
+.login a:hover {
+  border: none !important;
+}
+
+.sell > button {
+  position: relative;
+  border: none;
+}
+
+.sell-content {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.header2 {
+  display: none !important;
+  background-color: var(--header-color);
+  padding: 20px 20px;
+}
+
+.header2 .logo,
+.header2 .motor,
+.header2 .property {
+  width: 32%;
+  text-align: center;
+  border-radius: 4px;
+  background-color: white;
+}
+
+.header2 .active {
+  background-color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+  .header {
+    display: none !important;
+  }
+  .header2 {
+    display: flex !important;
+  }
+}
