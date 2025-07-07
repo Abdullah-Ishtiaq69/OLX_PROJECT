@@ -49,21 +49,22 @@ a {
   background-color: var(--header-color);
 }
 
-.logo a {
+#active {
   background-color: white;
   padding: 18px;
   border-top-left-radius: 16px;
   border-top-right-radius: 16px;
 }
 
+.logo,
 .motor,
 .property {
   cursor: pointer;
 }
 
-.motor img:hover ~ a,
+.motor img:hover~a,
 .motor a:hover,
-.property img:hover ~ a,
+.property img:hover~a,
 .property a:hover {
   color: var(--hover-color-blue) !important;
 }
@@ -78,17 +79,6 @@ a {
 
 .login a:hover {
   border: none !important;
-}
-
-.sell > button {
-  position: relative;
-  border: none;
-}
-
-.sell-content {
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .header2 {
@@ -107,6 +97,8 @@ a {
 }
 
 .header2 .active {
+  color: white;
+  fill: white;
   background-color: var(--primary-color);
 }
 
@@ -114,6 +106,7 @@ a {
   .header {
     display: none !important;
   }
+
   .header2 {
     display: flex !important;
   }
