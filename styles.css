@@ -62,9 +62,9 @@ a {
   cursor: pointer;
 }
 
-.motor img:hover~a,
+.motor img:hover ~ a,
 .motor a:hover,
-.property img:hover~a,
+.property img:hover ~ a,
 .property a:hover {
   color: var(--hover-color-blue) !important;
 }
@@ -102,6 +102,16 @@ a {
   background-color: var(--primary-color);
 }
 
+/* model css */
+.social-button:hover {
+  cursor: pointer;
+  box-shadow: inset 0 0 0 var(--btn-border-thickness, .1rem) var(--btn-border-color, #002f34);
+  transition: box-shadow .1s;
+}
+.last-text-color {
+  color: var(--hover-color-blue);
+  cursor: pointer;
+}
 @media (max-width: 768px) {
   .header {
     display: none !important;
