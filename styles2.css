@@ -1,0 +1,153 @@
+@font-face {
+    font-family: "primary";
+    src: url(./fonts/Geomanist-Regular.otf);
+}
+
+:root {
+    --primary-font: "primary";
+
+    --primary-color: #002f34;
+    --secondary-color: #f2f4f5;
+    --header-color: #ebf1ff;
+    --footer-color: #e4eaf9;
+    --hover-color-blue: #3a77ff;
+    --hover-color-gray: #002f34a3;
+
+    --fw-semibold: 600;
+    --fw-bold: 700;
+}
+
+/* CSS Reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+ol {
+    list-style-type: none;
+}
+
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Main Styling */
+
+.header {
+    padding: 12px 20px 0px;
+    background-color: var(--header-color);
+}
+
+#active {
+    background-color: white;
+    padding: 18px;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+}
+
+.logo,
+.motor,
+.property {
+    cursor: pointer;
+}
+
+.motor img:hover~a,
+.motor a:hover,
+.property img:hover~a,
+.property a:hover {
+    color: var(--hover-color-blue) !important;
+}
+
+.header-right {
+    padding-bottom: 6px;
+}
+
+.login span {
+    border-bottom: 2px solid black;
+    cursor: pointer;
+}
+
+.login span:hover {
+    border: none !important;
+}
+
+.header2 {
+    display: none !important;
+    background-color: var(--header-color);
+    padding: 20px 20px;
+}
+
+.header2 .logo,
+.header2 .motor,
+.header2 .property {
+    width: 32%;
+    text-align: center;
+    border-radius: 4px;
+    background-color: white;
+}
+
+.header2 .active {
+    color: white;
+    fill: white;
+    background-color: var(--primary-color);
+}
+
+/* model css */
+
+.model {
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+    /* bottom: 300px; */
+    background-color: white;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99;
+    transition: all .3s ease-in-out;
+}
+
+.fa-xmark {
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 28px;
+}
+
+.model-background {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+#login-check:checked~.model {
+    /* display: block !important; */
+    opacity: 1 !important;
+    top: 50%;
+    
+}
+
+#login-check:checked~.model-background {
+    display: block !important;
+}
+
+@media (max-width: 768px) {
+    .header {
+        display: none !important;
+    }
+
+    .header2 {
+        display: flex !important;
+    }
+}
